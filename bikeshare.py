@@ -1,7 +1,7 @@
 import time
 import pandas as pd
 import numpy as np
-
+"""importing and refering to city csv files"""
 CITY_DATA = { 'chicago': 'chicago.csv',
               'new york': 'new_york_city.csv',
               'washington': 'washington.csv' }
@@ -237,7 +237,7 @@ def display_data(df):
                 break
             else:
                 print('You did not enter a valid choice.')
-                return    
+                return
 
 def main():
     while True:
