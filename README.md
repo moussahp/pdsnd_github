@@ -37,3 +37,4 @@ washington.csv
 ### Credits
 https://stackoverflow.com is the most useful site I used through this course
 and of course the lectures of the course and their student hub
+and also python documentation is very helpful
