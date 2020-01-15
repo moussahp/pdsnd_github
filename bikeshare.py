@@ -20,33 +20,26 @@ def get_filters():
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
 
 
-    while True:
-      city = input("please enter city name: ").lower()
-      if city not in ('new york','chicago','washington'):
-        print("please enter the name again:")
-        continue
-      else:
-        break
+    city=input("Please choose one of the three cities: chicago, new york city, washington:\n").lower()
+    while city not in ["chicago", "new york city", "washington"]:
+        print("You did not type the correct name, please try it again:\n")
+        city=input("Please choose one of the three cities: chicago, new york city, washington:\n").lower()
 
     # TO DO: get user input for month (all, january, february, ... , june)
 
-    while True:
-      month = input("please enter the month name: ").lower()
-      if month not in ('january', 'february', 'march', 'april', 'may', 'june', 'all'):
-        print("name error please enter it again: ")
-        continue
-      else:
-        break
+    month=input("Please choose one of the following months: january, february, march, april, may, june, all:\n").lower()
+    while month not in ["january", "february", "march", "april", "may", "june", "all"]:
+        print("You did not type the correct name, please try it again:\n")
+        month=input("Please choose one of the following months: january, february, march, april, may, june, all:\n").lower()
+
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
 
-    while True:
-      day = input("please enter which day: ")
-      if day not in ('sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'all'):
-        print("name error please enter it again: ")
-        continue
-      else:
-        break
+    day =input("Please choose one of the following day of week: monday, tuesday, wednesday, thursday, friday, all:\n").lower()
+    while day not in ["monday", "tuesday", "wednesday", "thursday", "friday", "all"]:
+        print("You did not type the correct name, please try it again:\n")
+        day=input("Please choose one of the following day of week: monday, tuesday, wednesday, thursday, friday, all:\n").lower()
+
 
     print('-'*40)
     return city, month, day
