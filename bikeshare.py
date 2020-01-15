@@ -193,21 +193,15 @@ def user_stats(df):
     # TO DO: Display earliest, most recent, and most common year of birth
 
     try:
-      Earliest_Year = df['Birth Year'].min()
+      Earliest_Year = min(df['Birth Year'])
       print('\nEarliest Year:', Earliest_Year)
-    except KeyError:
-      print("\nEarliest Year:\nNo data available for this month.")
 
-    try:
-      Most_Recent_Year = df['Birth Year'].max()
+      Most_Recent_Year = max(df['Birth Year'])
       print('\nMost Recent Year:', Most_Recent_Year)
-    except KeyError:
-      print("\nMost Recent Year:\nNo data available for this month.")
 
-    try:
       Most_Common_Year = df['Birth Year'].value_counts().idxmax()
       print('\nMost Common Year:', Most_Common_Year)
-    except KeyError:
+    except:
       print("\nMost Common Year:\nNo data available for this month.")
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -237,7 +231,7 @@ def display_data(df):
                 break
             else:
                 print('You did not enter a valid choice.')
-                return    
+                return
 
 def main():
     while True:
